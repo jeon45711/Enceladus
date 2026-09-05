@@ -67,7 +67,7 @@ cargo build --release --features full
 Running a C++ Program (Full Mode)
 Bash
 # Execute a C++ source file
-./target/release/enceladus run test_complex.cpp
+enceladus run test_complex.cpp
 test_complex.cpp Example:
 
 C++
@@ -108,7 +108,7 @@ int main() {
 }
 ```
 
-🔧 Technical Details
+###🔧 Technical Details
 Linker Script (link.ld) & Memory Map
 RAM Start Address: 0x80000000 (QEMU virt default).
 
@@ -123,5 +123,5 @@ _sbrk: Allocates dynamic memory starting from the _end symbol boundary.
 
 exit_qemu: Writes 0x5555 to 0x100000 to terminate the QEMU emulator session gracefully.
 
-📜 License
+###📜 License
 This project is licensed under the MIT License - see the LICENSE file for details.
