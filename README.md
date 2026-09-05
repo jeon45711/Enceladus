@@ -41,17 +41,17 @@ It seamlessly handles both **ultra-lightweight bare-metal C** and **feature-rich
          ▼
   [ RISC-V Toolchain ] ───▶ [ QEMU Virt Platform ] ───▶ [ Console Output ]
 ```
+## 🚀 Quick Start
 
-🚀 Quick Start
-Prerequisites
-Rust / Cargo (Latest stable version recommended)
+### Prerequisites
 
-QEMU for RISC-V (qemu-system-riscv64)
+* [Rust / Cargo](https://rustup.rs/) (Latest stable version recommended)
+* [QEMU for RISC-V](https://www.qemu.org/) (`qemu-system-riscv64`)
+* xPack RISC-V GCC Toolchain (`riscv-none-elf-gcc` / `g++`)
 
-xPack RISC-V GCC Toolchain (riscv-none-elf-gcc / g++)
+### Installation & Build
 
-Installation & Build
-Bash
+```bash
 # 1. Clone the repository
 git clone [https://github.com/jeon45711/Enceladus.git](https://github.com/jeon45711/Enceladus.git)
 cd Enceladus
@@ -61,6 +61,8 @@ cargo build --release
 
 # 2-B. Build for Full Mode (C++ and stdio.h support)
 cargo build --release --features full
+```
+
 💻 Usage
 Running a C++ Program (Full Mode)
 Bash
@@ -69,6 +71,7 @@ Bash
 test_complex.cpp Example:
 
 C++
+```
 #include <stdio.h>
 
 // 1. Testing C++ Global Constructor
@@ -103,6 +106,8 @@ int main() {
     
     return 0;
 }
+```
+
 🔧 Technical Details
 Linker Script (link.ld) & Memory Map
 RAM Start Address: 0x80000000 (QEMU virt default).
